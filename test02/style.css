@@ -27,13 +27,25 @@ body {
   font-size: 18px;
 }
 
+.img-logo {
+  width: 45px;
+  border-radius: 1px;
+}
+.img-gpt-icon {
+  width: 25px;
+  border-radius: 0px;
+  }
+
 
 .top-right {
   display: flex;
   align-items: center;
   gap: 8px;
-  font-size: 12px;
+  font-size: 20px;
 }
+.img-gpt-icon {
+  width: 34px;
+  } 
 
 .pill-btn {
   padding: 6px 16px;
@@ -159,11 +171,14 @@ main {
   cursor: pointer;
   font-weight: 570;
 }
+.img-gpt-icon {
+  width: 20px;
+}
 
 .voice-icon {
   font-size: 12px;
 }
 
 .voice-btn:hover {
-  background: #e5e7eb;
+  background: #b5b5b5;
 }
