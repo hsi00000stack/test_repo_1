@@ -35,8 +35,7 @@ body {
   border-radius: 1px;
 }
 
-/* 공통 아이콘 이미지 크기
-   - 기본은 20px, 필요하면 HTML에서 inline-style로 개별 조절 */
+/* 공통 아이콘 이미지 크기 */
 .img-gpt-icon {
   width: 20px;
   border-radius: 0;
@@ -160,7 +159,7 @@ main {
   border: 1px solid rgba(0,0,0,0.06);
   border-radius: 999px;
 
-             /* 약간 굵게 */
+  /* 약간 굵게 */
 }
 
 /* 카드 하단: 칩 + 음성 버튼 줄 */
