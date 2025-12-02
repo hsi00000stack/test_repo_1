@@ -90,7 +90,6 @@ main {
 
 /*프롬프트 카드 박스 */
 .prompt-card {
-  /* 화면이 좁으면 양 옆 여백 확보, 넓으면 최대 770px */
   width: min(770px, 100% - 120px);
   background: #ffffff;
   border: 1px solid rgba(0,0,0,0.1);
