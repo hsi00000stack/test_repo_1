@@ -1,0 +1,184 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, sans-serif;
+  background: #ffffff;
+  color: #111827;
+}
+
+
+/* 상단 바(header 영역) */
+.top-bar {
+  height: 52px;
+  padding: 10px 24px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* 왼쪽: 로고 + 타이틀 */
+.top-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 18px;
+}
+
+/* ChatGPT 로고 이미지 */
+.img-logo {
+  width: 45px;
+  border-radius: 1px;
+}
+
+/* 공통 아이콘 이미지 크기 */
+.img-gpt-icon {
+  width: 20px;
+  border-radius: 0;
+}
+
+/* 오른쪽: 로그인 / 회원가입 / 아이콘 */
+.top-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 20px;
+}
+
+
+/* 버튼 스타일 (pill 형태) */
+.pill-btn {
+  padding: 6px 16px;
+  border-radius: 999px;
+  border: 1px solid #e5e7eb;
+  background: #ffffff;
+  cursor: pointer;
+}
+
+.pill-btn.primary {
+  background: #111827;
+  color: #ffffff;
+  border-color: #111827;
+}
+
+.pill-btn:hover {
+  opacity: 0.9;
+}
+
+
+/* 메인 레이아웃 */
+main {
+  height: calc(100vh - 52px); /* 상단바 높이 제외한 영역 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 메인 질문 타이틀 */
+.headline {
+  font-size: 28px;
+  font-weight: 400;
+  margin-bottom: 30px;
+  margin-top: -170px; /* 중앙에서 위로 조금 끌어올리기용 */
+}
+
+
+/*프롬프트 카드 박스 */
+.prompt-card {
+  /* 화면이 좁으면 양 옆 여백 확보, 넓으면 최대 770px */
+  width: min(770px, 100% - 120px);
+  background: #ffffff;
+  border: 1px solid rgba(0,0,0,0.1);
+
+  border-radius: 31px; /* 둥근 사각형 */
+  box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+  padding: 18px 24px 14px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+
+/* 입력창과 하단 기능 영역*/
+/* 텍스트 입력창 */
+.prompt-input {
+  border: none;
+  outline: none;
+  font-size: 14px;
+  color: #111827;
+}
+
+.prompt-input::placeholder {
+  font-size: 16px;
+  color: #9ca3af;
+}
+
+
+/*칩 버튼들 (첨부 / 검색 / 학습하기)*/
+.chips {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.chip-btn {
+  display: flex;
+  align-items: center;
+  gap: 1px;
+
+
+  padding: 5px 10px;
+  background: #ffffff;
+
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: 999px;
+
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.chip-btn:hover {
+  background: #f9fafb;
+}
+
+
+/* 음성 버튼*/
+.voice-btn {
+  display: flex;
+  align-items: center;
+  gap: 0px;
+  padding: 7px 12px;
+
+  background: #f3f4f6;           /* 연한 회색 */
+  border: 1px solid rgba(0,0,0,0.06);
+  border-radius: 999px;
+
+  /* 약간 굵게 */
+}
+
+/* 카드 하단: 칩 + 음성 버튼 줄 */
+.prompt-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+}
+
+
+.voice-icon {
+  font-size: 12px;
+  position:absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.voice-btn:hover {
+  background: #b5b5b5;
+}
+
