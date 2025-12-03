@@ -14,7 +14,7 @@ if (card && input) {
     if (e.key === "Enter") {
       e.preventDefault();
       if (!input.value.trim()) return;
-      alert("질문이 전송된 것처럼 보이는 예시 동작이야 :)\n\n" + input.value);
+      alert("안녕하세요 ChatGPT 입니다 :)\n\n" + input.value);
       input.value = "";
     }
   });
