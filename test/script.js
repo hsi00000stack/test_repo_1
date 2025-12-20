@@ -1,4 +1,4 @@
-// 카드 아무 곳이나 클릭하면 입력창에 포커스
+
 const card = document.querySelector(".prompt-card");
 const input = document.querySelector(".prompt-input");
 
@@ -9,12 +9,20 @@ if (card && input) {
     }
   });
 
-  // 엔터 치면 간단히 알림만 띄우는 예시
+  // 엔터 치면 구글 검색
   input.addEventListener("keydown", (e) => {
     if (e.key === "Enter") {
       e.preventDefault();
-      if (!input.value.trim()) return;
-      alert("안녕하세요 ChatGPT 입니다 :)\n\n" + input.value);
+
+      const query = input.value.trim();
+      if (!query) return;
+
+      const googleUrl =
+        "https://www.google.com/search?q=" + encodeURIComponent(query);
+
+      window.open(googleUrl, "_blank"); // 새 탭에서 검색
+      // window.location.href = googleUrl; // 같은 탭 원하면 이걸로
+
       input.value = "";
     }
   });
